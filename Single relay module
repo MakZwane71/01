@@ -1,0 +1,19 @@
+// Relay control pin (IN1 or SIG)
+const int relayPin = 7;
+
+void setup() {
+  // Set the relay pin as an output
+  pinMode(relayPin, OUTPUT);
+}
+
+void loop() {
+  // Turn on the relay (activate the load)
+  digitalWrite(relayPin, HIGH);
+  Serial.println("Relay is ON. The load is connected.");
+  delay(2000); // Wait for 2 seconds
+
+  // Turn off the relay (deactivate the load)
+  digitalWrite(relayPin, LOW);
+  Serial.println("Relay is OFF. The load is disconnected.");
+  delay(2000); // Wait for 2 seconds
+}
